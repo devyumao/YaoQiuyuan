@@ -4,8 +4,12 @@
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" href="css/jquery.mobile.flatui.min.css" />
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.0-beta.1.min.css" />
         <link rel="stylesheet" href="css/yaoqiuyuan.css" />
+        <link rel="stylesheet" href="css/n-flag.css" />
+        <script src="phonegap.js"></script>
+        <script src="js/jquery-2.0.3.min.js"></script>
+        <script src="js/jquery.mobile-1.4.0-beta.1.min.js"></script>
         <title>姚秋元</title>
     </head>
     <body>
@@ -14,24 +18,22 @@
                 <h1>球员信息</h1>
             </div> -->
             <div data-role="content">
-                <ul data-role="listview" data-inset="true" class="player-card" style="margin: 0 0 10px 0;">
+                <ul data-role="listview" data-inset="true" class="player-card">
                     <li data-role="list-divider" data-theme="a" class="divider">
-                        <span class="player-sname">M. Ozil</span>
+                        <span class="player-sname">M. Özil</span>
                         <span class="player-club">
                             <img class="c-logo" src="http://cache.images.globalsportsmedia.com/soccer/teams/150x150/660.png"/>
-                            <span class="c-name"> 阿森纳</span> 
+                            <span class="c-name">阿森纳</span> 
                         </span>
                     </li>
-                    <li style="padding-bottom: 3px;">
-                        <img src="http://cdn.content.easports.com/fifa/fltOnlineAssets/C74DDF38-0B11-49b0-B199-2E2A11D1CC13/2014/fut/items/images/players/web/176635.png" class="player-avatar"/>
+                    <li>
+                        <img class="player-avatar" src="http://cdn.content.easports.com/fifa/fltOnlineAssets/C74DDF38-0B11-49b0-B199-2E2A11D1CC13/2014/fut/items/images/players/web/176635.png"/>
                         <div class="player-header">
                             <div class="player-nation">
                                 <span class="n-flag n-21"></span>
-                                <span class="n-name"> 德国</span>                              
+                                <span class="n-name">德国</span>                              
                             </div>
-                            <div class="player-birthday">
-                                15 October 1988
-                            </div>
+                            <div class="player-birthday">15 October 1988</div>
                             <div class="player-body">
                                 <span class="player-height">181cm</span>
                                 <span class="player-weight">70kg</span>
@@ -39,7 +41,7 @@
                         </div>
                         <div class="clearfix"><div>
                     </li>
-                    <li style="padding-top: 0;">
+                    <li class="player-play">
                         <div class="ui-grid-a inner-bottom">
                             <div class="ui-block-a">
                                 能力 <span class="player-overall value green-bg">87</span>
@@ -49,213 +51,246 @@
                             </div>
                         </div>
                         <div>
-                            位置 <span class="position">
-                             <span class="badge blue-bg">CAM</span> 
-                             <span class="badge darkgreen-bg">RM</span>
-                             <span class="badge darkgreen-bg">CM</span>
+                            位置 <span class="player-position">
                             </span>
                         </div>
                     </li>
                 </ul>
-                <div class="ui-grid-a player-values outer-bottom">
+                <div class="ui-grid-a player-values">
                     <div class="ui-block-a player-attacking">
-                        <div class="values-title inner-bottom">进攻</div>
-                        <div>
-                            <span class="value green-bg">83</span>
-                            传中
-                        </div>
-                        <div>
-                            <span class="value yellow-bg">73</span>
-                            射术
-                        </div>
-                        <div>
-                            <span class="value orange-bg">54</span>
-                            头球精度
-                        </div>
-                        <div>
-                            <span class="value green-bg">88</span>
-                            短传
-                        </div>
-                        <div>
-                            <span class="value yellow-bg">77</span>
-                            凌空
-                        </div>
+                        <ul data-role="listview" data-inset="true">
+                            <li>
+                                <div class="values-title inner-bottom">进攻</div>
+                                <div>
+                                    <span class="value green-bg">83</span>
+                                    传中
+                                </div>
+                                <div>
+                                    <span class="value yellow-bg">73</span>
+                                    射术
+                                </div>
+                                <div>
+                                    <span class="value orange-bg">54</span>
+                                    头球精度
+                                </div>
+                                <div>
+                                    <span class="value green-bg">88</span>
+                                    短传
+                                </div>
+                                <div>
+                                    <span class="value yellow-bg">77</span>
+                                    凌空
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     <div class="ui-block-b player-power">
-                        <div class="values-title inner-bottom">力量</div>
-                        <div>
-                            <span class="value yellow-bg">69</span>
-                            射门力量
-                        </div>
-                        <div>
-                            <span class="value orange-bg">53</span>
-                            射术
-                        </div>
-                        <div>
-                            <span class="value orange-bg">62</span>
-                            头球精度
-                        </div>
-                        <div>
-                            <span class="value orange-bg">58</span>
-                            强壮
-                        </div>
-                        <div>
-                            <span class="value yellow-bg">75</span>
-                            远射
-                        </div>
+                        <ul data-role="listview" data-inset="true">
+                            <li>
+                                <div class="values-title inner-bottom">力量</div>
+                                <div>
+                                    <span class="value yellow-bg">69</span>
+                                    射门力量
+                                </div>
+                                <div>
+                                    <span class="value orange-bg">53</span>
+                                    射术
+                                </div>
+                                <div>
+                                    <span class="value orange-bg">62</span>
+                                    头球精度
+                                </div>
+                                <div>
+                                    <span class="value orange-bg">58</span>
+                                    强壮
+                                </div>
+                                <div>
+                                    <span class="value yellow-bg">75</span>
+                                    远射
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="ui-grid-a player-values outer-bottom">
+                <div class="ui-grid-a player-values">
                     <div class="ui-block-a player-defending">
-                        <div class="values-title inner-bottom">防守</div>
-                        <div>
-                            <span class="value red-bg">22</span>
-                            盯人
-                        </div>
-                        <div>
-                            <span class="value red-bg">25</span>
-                            抢断
-                        </div>
-                        <div>
-                            <span class="value red-bg">25</span>
-                            铲球
-                        </div>
+                        <ul data-role="listview" data-inset="true">
+                            <li>
+                                <div class="values-title inner-bottom">防守</div>
+                                <div>
+                                    <span class="value red-bg">22</span>
+                                    盯人
+                                </div>
+                                <div>
+                                    <span class="value red-bg">25</span>
+                                    抢断
+                                </div>
+                                <div>
+                                    <span class="value red-bg">25</span>
+                                    铲球
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     <div class="ui-block-b player-mentality">
-                        <div class="values-title inner-bottom">心理</div>
-                        <div>
-                            <span class="value orange-bg">69</span>
-                            侵略性
-                        </div>
-                        <div>
-                            <span class="value red-bg">33</span>
-                            拦截意识
-                        </div>
-                        <div>
-                            <span class="value green-bg">84</span>
-                            跑位
-                        </div>
-                        <div>
-                            <span class="value darkgreen-bg">92</span>
-                            视野
-                        </div>
-                        <div>
-                            <span class="value yellow-bg">78</span>
-                            点球
-                        </div>
+                        <ul data-role="listview" data-inset="true">
+                            <li>
+                                <div class="values-title inner-bottom">心理</div>
+                                <div>
+                                    <span class="value orange-bg">69</span>
+                                    侵略性
+                                </div>
+                                <div>
+                                    <span class="value red-bg">33</span>
+                                    拦截意识
+                                </div>
+                                <div>
+                                    <span class="value green-bg">84</span>
+                                    跑位
+                                </div>
+                                <div>
+                                    <span class="value darkgreen-bg">92</span>
+                                    视野
+                                </div>
+                                <div>
+                                    <span class="value yellow-bg">78</span>
+                                    点球
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="ui-grid-a player-values outer-bottom">
+                <div class="ui-grid-a player-values">
                     <div class="ui-block-a player-skill">
-                        <div class="values-title inner-bottom">技巧</div>
-                        <div>
-                            <span class="value green-bg">87</span>
-                            盘带
-                        </div>
-                        <div>
-                            <span class="value green-bg">84</span>
-                            弧线
-                        </div>
-                        <div>
-                            <span class="value yellow-bg">79</span>
-                            任意球精度
-                        </div>
-                        <div>
-                            <span class="value green-bg">80</span>
-                            长传
-                        </div>
-                        <div>
-                            <span class="value darkgreen-bg">91</span>
-                            控球
-                        </div>
+                        <ul data-role="listview" data-inset="true">
+                            <li>
+                                <div class="values-title inner-bottom">技巧</div>
+                                <div>
+                                    <span class="value green-bg">87</span>
+                                    盘带
+                                </div>
+                                <div>
+                                    <span class="value green-bg">84</span>
+                                    弧线
+                                </div>
+                                <div>
+                                    <span class="value yellow-bg">79</span>
+                                    任意球精度
+                                </div>
+                                <div>
+                                    <span class="value green-bg">80</span>
+                                    长传
+                                </div>
+                                <div>
+                                    <span class="value darkgreen-bg">91</span>
+                                    控球
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     <div class="ui-block-b player-movement">
-                        <div class="values-title inner-bottom">移动</div>
-                        <div>
-                            <span class="value yellow-bg">78</span>
-                            加速
-                        </div>
-                        <div>
-                            <span class="value yellow-bg">76</span>
-                            速度
-                        </div>
-                        <div>
-                            <span class="value green-bg">85</span>
-                            敏捷
-                        </div>
-                        <div>
-                            <span class="value green-bg">85</span>
-                            反应
-                        </div>
-                        <div>
-                            <span class="value yellow-bg">78</span>
-                            平衡
-                        </div>
+                        <ul data-role="listview" data-inset="true">
+                            <li>
+                                <div class="values-title inner-bottom">移动</div>
+                                <div>
+                                    <span class="value yellow-bg">78</span>
+                                    加速
+                                </div>
+                                <div>
+                                    <span class="value yellow-bg">76</span>
+                                    速度
+                                </div>
+                                <div>
+                                    <span class="value green-bg">85</span>
+                                    敏捷
+                                </div>
+                                <div>
+                                    <span class="value green-bg">85</span>
+                                    反应
+                                </div>
+                                <div>
+                                    <span class="value yellow-bg">78</span>
+                                    平衡
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div> 
-                <div class="ui-grid-a player-values outer-bottom">
+                <div class="ui-grid-a player-values">
                     <div class="ui-block-a player-gk">
-                        <div class="values-title inner-bottom">守门</div>
-                        <div>
-                            <span class="value red-bg">6</span>
-                            鱼跃
-                        </div>
-                        <div>
-                            <span class="value red-bg">14</span>
-                            手形
-                        </div>
-                        <div>
-                            <span class="value red-bg">10</span>
-                            开球
-                        </div>
-                        <div>
-                            <span class="value red-bg">6</span>
-                            站位
-                        </div>
-                        <div>
-                            <span class="value red-bg">14</span>
-                            反应
-                        </div>
+                        <ul data-role="listview" data-inset="true">
+                            <li>
+                                <div class="values-title inner-bottom">守门</div>
+                                <div>
+                                    <span class="value red-bg">6</span>
+                                    鱼跃
+                                </div>
+                                <div>
+                                    <span class="value red-bg">14</span>
+                                    手形
+                                </div>
+                                <div>
+                                    <span class="value red-bg">10</span>
+                                    开球
+                                </div>
+                                <div>
+                                    <span class="value red-bg">6</span>
+                                    站位
+                                </div>
+                                <div>
+                                    <span class="value red-bg">14</span>
+                                    反应
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     <div class="ui-block-b player-others">
-                        <div class="player-foot">
-                            惯用脚 <span class="desc">左</span>
-                        </div>
-                        <div class="player-reputation">
-                            <span class="stars">★★★★☆</span> 声誉
-                        </div>
-                        <div class="player-weekfoot">
-                            <span class="stars">★★☆☆☆</span> 逆足
-                        </div>
-                        <div class="player-skillmoves">
-                             <span class="stars">★★★★☆</span> 花式
-                        </div>
-                        <div class="player-awr">
-                            进攻积极性 <span class="desc">中</span>
-                        </div>
-                        <div class="player-dwr">
-                            防守积极性 <span class="desc">低</span>
-                        </div>
+                        <ul data-role="listview" data-inset="true">
+                            <li>
+                                <div class="player-foot">
+                                    惯用脚 <span class="desc">左</span>
+                                </div>
+                                <div class="player-reputation">
+                                    <span class="stars">★★★★☆</span> 名气
+                                </div>
+                                <div class="player-weekfoot">
+                                    <span class="stars">★★☆☆☆</span> 逆足
+                                </div>
+                                <div class="player-skillmoves">
+                                     <span class="stars">★★★★☆</span> 花式
+                                </div>
+                                <div class="player-awr">
+                                    进攻积极性 <span class="desc">中</span>
+                                </div>
+                                <div class="player-dwr">
+                                    防守积极性 <span class="desc">低</span>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div> 
-                <div class="ui-grid-a outer-bottom">
+                <div class="ui-grid-a player-feafure">
                     <div class="ui-block-a player-traits">
-                        <div class="values-title inner-bottom">特点</div>
-                        <div class="attr-item">天才</div>
-                        <div class="attr-item">压迫防线</div>
-                    </div>
+                        <ul data-role="listview" data-inset="true">
+                            <li>
+                                <div class="values-title inner-bottom">特点</div>
+                                <div class="attr-item">天才</div>
+                                <div class="attr-item">压迫防线</div>
+                            </li>
+                        </ul>
+                    </div>   
                     <div class="ui-block-b player-specialities">
-                        <div class="values-title inner-bottom">专长</div>
-                        <div class="attr-item">盘带大师</div>
-                        <div class="attr-item">全能中场</div>
-                    </div>
+                        <ul data-role="listview" data-inset="true">
+                            <li>
+                                <div class="values-title inner-bottom">专长</div>
+                                <div class="attr-item">盘带大师</div>
+                                <div class="attr-item">全能中场</div>
+                            </li>
+                        </ul>
+                    </div>                        
                 </div>
             </div>
         </div>
-        <script src="phonegap.js"></script>
-        <script src="js/jquery-1.9.1.min.js"></script>
-        <script src="js/jquery.mobile-1.3.2.min.js"></script>
-        <script src="js/DOMParser.js"></script>
         <script src="js/player-info.js"></script>
     </body>
 </html>
