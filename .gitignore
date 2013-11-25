@@ -1,6 +1,6 @@
-platforms/ios/www/cmprPlayers/*
-merges/*
-plugins/*
-www/*
+/platforms/ios/www/cmprPlayers/*
+/merges/*
+/plugins/*
+/www/*
 
 
